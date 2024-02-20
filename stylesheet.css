@@ -11,3 +11,16 @@ body{
     background: #ccc; /* some styling */
     border-bottom: 1px solid #333; /* some styling */
 }
+html {
+scroll-behavior: smooth;
+}
+
+a {
+text-decoration: none;
+color: black;
+} 
+
+#down {
+margin-top: 100%;
+padding-bottom: 25%;
+} 
