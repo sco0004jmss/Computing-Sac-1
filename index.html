@@ -1,28 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fixed Navigation Bar</title>
+<style>
+    body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+    }
+    
+    header {
+        background-color: #f5f5dc; /* Set beige background color */
+        color: #663300; /* Set text color to contrast with beige background */
+        padding: 0; /* Set padding to 0 to remove space around header */
+        text-align: center;
+        position: relative; /* Position relative for absolute positioning of text */
+        margin-bottom: -4px; /* Remove any bottom margin */
+    }
 
-<!DOCTYPE HTML>
-<html>
-    <head>
-        <title>JMSS Career Aspiratiions</title>
-    </head>
+    header img {
+        width: 100%;
+        margin-top: 0; /* Remove margin on top of the image */
+        /* filter: blur(3px); */ /* Removed blur effect */
+        display: block; /* Ensure the image behaves like a block element */
+    }
 
-    <body>
-        <div id="toolbar">
-            <p>Some content...</p>
-        </div>
-        
-        <p>Hello world!</p>
-        <h1>THats so crazy!!!</h1></body>
-        <br><br><br><br><br><br><br><br>
-        <br><br><br><br><br><br><br><br>
-        <br><br><br><br><br><br><br><br>
+    header h1 {
+        position: absolute;
+        top: 40%; /* Adjust the vertical position */
+        left: 50%; /* Position the text 50% from the left */
+        transform: translate(-50%, -50%); /* Center the text horizontally and vertically */
+        font-size: 5em; /* Set font size to be larger */
+        font-weight: bold; /* Set font weight to bold */
+        font-family: 'Impact', sans-serif; /* Set font family to a bold thick font */
+        color: #000; /* Set text color to black */
+        opacity: .8; /* Set text opacity */
+        white-space: nowrap; /* Prevent text from wrapping */
+    }
 
-        <a href="#down">Click Here to Smoothly Scroll Down</a>
-  <div id="down">
-    <h1>You are down!</h1>
-  </div>
-  <br><br><br><br><br><br><br><br>
-  <br><br><br><br><br><br><br><br>
-  <br><br><br><br><br><br><br><br>
-  <p>Hi!</p>
-    </body>
+    nav {
+        position: sticky;
+        top: 0;
+        width: 100%;
+        background-color: #b5651d; /* Darker color for the navigation bar */
+        padding: 15px 0; /* Increased padding for a bigger look */
+        text-align: center;
+        z-index: 1000;
+    }
+    
+    nav a {
+        color: white;
+        text-decoration: none;
+        margin: 0 20px;
+        font-size: 1.2em; /* Larger font size */
+        font-family: 'Arial', sans-serif; /* Better font */
+    }
+    
+    section {
+        height: 800px; /* Just for demonstration purposes */
+        margin-top: -20px; /* Reduce the gap between navbar and section */
+    }
+</style>
+</head>
+<body>
+    <header>
+        <img src="VCE_Classroom.jpg" alt="Your Image">
+        <h1>How your VCE Subjects<br>can affect your desired<br>future career</h1>
+    </header>
+
+    <nav>
+        <a href="#section1">Introduction</a>
+        <a href="#section2">Button 2</a>
+        <a href="#section3">Button 3</a>
+        <a href="#section4">Button 4</a>
+    </nav>
+
+    <section id="section1">
+        <h2>Section 1</h2>
+        <!-- Content of section 1 -->
+    </section>
+    <section id="section2">
+        <h2>Section 2</h2>
+        <!-- Content of section 2 -->
+        <video width="320" autoplay muted loop>
+            <source src="atomspinnin.mp4" type="video/mp4">
+            Video not supported
+        </video>
+    </section>
+    <section id="section3">
+        <h2>Section 3</h2>
+        <!-- Content of section 3 -->
+    </section>
+    <section id="section4">
+        <h2>Section 4</h2>
+        <!-- Content of section 4 -->
+    </section>
+    
+    <script>
+        // Smooth scrolling with less scroll offset
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                const target = document.querySelector(this.getAttribute('href'));
+                const offset = 55; // Adjust the scroll offset here
+                const targetTop = target.getBoundingClientRect().top + window.pageYOffset;
+                window.scrollTo({
+                    top: targetTop - offset,
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
 </html>
