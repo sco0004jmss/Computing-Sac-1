@@ -7,39 +7,49 @@ body {
     margin: 0;
 }
 p {    
-    line-height: 1.5; /* Adjust line height */
-    letter-spacing: 1px; /* Adjust letter spacing for words */
+    line-height: 1.5;
+    letter-spacing: 1px; 
     
     text-align: center;
 }
 header {
-    padding: 0; /* Set padding to 0 to remove space around header */
+    padding: 0; 
     text-align: center;
-    position: relative; /* Position relative for absolute positioning of text */
-    margin-bottom: -4px; /* Remove any bottom margin */
+    position: relative; 
+    margin-bottom: -4px; 
     white-space:nowrap;
 }
 
 header h1 {
     position: absolute;
-    top: 40%; /* Adjust the vertical position */
-    left: 50%; /* Position the text 50% from the left */
-    transform: translate(-50%, -50%); /* Center the text horizontally and vertically */
-    font-size: 1.35em; /* Set font size to be larger */
-    font-weight: bold; /* Set font weight to bold */
-    opacity: .8; /* Set text opacity */
+    top: 40%; 
+    left: 50%; 
+    transform: translate(-50%, -50%); 
+    font-size: 4em; 
+    font-weight: bold; 
+    opacity: 1; 
+}
+
+header h2 {
+    position: absolute;
+    top: 40%; 
+    left: 50%; 
+    transform: translate(-50%, -50%); 
+    font-size: 3em; 
+    font-weight: bold; 
+    opacity: 1; 
 }
 header p {
     position:absolute;
-    top: 40%; /* Adjust the vertical position */
-    left: 50%; /* Position the text 50% from the left */
-    transform: translate(-50%, 500%); /* Center the text horizontally and vertically */
+    top: 40%;
+    left: 50%; 
+    transform: translate(-50%, 500%); 
 }
 
 .container {
     display: flex;
-    align-items: center; /* Align items vertically */
-    max-width: 800px; /* Adjust as needed */
+    align-items: center;
+    max-width: 800px; 
     height:auto;
 }
 p{
@@ -47,8 +57,8 @@ p{
 }
 
 .container img {
-    max-width: 100px; /* Adjust image width as needed */
-    margin-right: 20px; /* Add spacing between image and text */
+    max-width: 100px;
+    margin-right: 20px;
 }
 
 
@@ -56,8 +66,8 @@ nav {
     position: sticky;
     top: 0;
     width: 100%;
-    background-color: #131316; /* Darker color for the navigation bar */
-    padding: 15px 0; /* Increased padding for a bigger look */
+    background-color: #131316;
+    padding: 15px 0; 
     text-align: center;
     z-index: 1000;
 }
@@ -69,7 +79,7 @@ nav a {
     color: rgb(255, 255, 255);
     text-decoration: none;
     margin: 0 20px;
-    font-size: 1.2em; /* Larger font size */
+    font-size: 1.2em;
 }
 
 
