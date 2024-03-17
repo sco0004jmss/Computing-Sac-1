@@ -15,7 +15,19 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 
 
 
+const observerTwo = new IntersectionObserver((entries) =>{
+    entries.forEach((entry)=>{
+        console.log(entry)
+        if(entry.isIntersecting){
+            entry.target.classList.add('show');
+        }else{
+            entry.target.classList.remove('show');
+        }
+    });
+});
 
+const hiddenElementsTwo=document.querySelectorAll('.hidden2');
+hiddenElementsTwo.forEach((el)=>observerTwo.observe(el));
 
 
 
@@ -49,3 +61,18 @@ const spinserver = new IntersectionObserver((entries) =>{
 
 const spinninElements=document.querySelectorAll('.hiddenSpin');
 spinninElements.forEach((el)=>spinserver.observe(el));
+
+
+const observerThree = new IntersectionObserver((entries) =>{
+    entries.forEach((entry)=>{
+        console.log(entry)
+        if(entry.isIntersecting){
+            entry.target.classList.add('show');
+        }else{
+            entry.target.classList.remove('show');
+        }
+    });
+});
+
+const hiddenElementsThree=document.querySelectorAll('.hidden3');
+hiddenElementsThree.forEach((el)=>observerThree.observe(el));
