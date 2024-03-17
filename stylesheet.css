@@ -98,11 +98,22 @@ section, div{
 .nospace{
     min-height:none;
 }
-
 .hidden{
     opacity: 0;
     filter:blur(5px);
     transform: translateX(-100%);
+    transition: all 1s;
+}
+.hidden2{
+    opacity: 0;
+    filter:blur(5px);
+    transform: translateX(100%);
+    transition: all 1s;
+}
+.hidden3{
+    opacity: 0;
+    filter:blur(5px);
+    transform: translateY(100%);
     transition: all 1s;
 }
 .show{
@@ -114,13 +125,16 @@ section, div{
     display:flex;
 }
 .logo:nth-child(2){
-    transition-delay: 300ms;
+    transition-delay: 200ms;
 }
 .logo:nth-child(3){
-    transition-delay: 600ms;
+    transition-delay: 400ms;
 }
 .logo:nth-child(4){
-    transition-delay: 900ms;
+    transition-delay: 600ms;
+}
+.logo:nth-child(5){
+    transition-delay: 800ms;
 }
 
 
