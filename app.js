@@ -3,7 +3,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         e.preventDefault();
 
         const target = document.querySelector(this.getAttribute('href'));
-        const offset = 55; // Adjust the scroll offset here
+        const offset = 55;
         const targetTop = target.getBoundingClientRect().top + window.pageYOffset;
         window.scrollTo({
             top: targetTop - offset,
